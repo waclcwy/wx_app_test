@@ -6,8 +6,16 @@ Page( {
     },
     loadData: function( _url ) {
         var _t = this;
+        var _articleType = 'text';
         if(_url){
-            _url=_url.replace(/_[\w]./i,'_r.');
+            if(_url.indexOf('_v.')>-1){
+                _articleType = 'video';
+            }
+            if(_articleType=='video'){
+                _url=_url.replace(/_[\w]\.html?/i,'_videos.json');
+            }else{
+                _url=_url.replace(/_[\w]\./i,'_r.');
+            }
             wx.request( {
                 url: _url,
                 header: {
@@ -16,6 +24,7 @@ Page( {
                 success: function( res ) {
                     var _data = {};
                     _data = res.data;
+                    _data.articleType=_articleType;
                     _data.txt=fun.htmlToText(_data.txt);
                     console.log(_data);
                     _t.setData( _data );

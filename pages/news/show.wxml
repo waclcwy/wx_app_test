@@ -1,4 +1,16 @@
-<view class="title">{{title}}</view>
-<view class="info">{{sortDate}}</view>
-<view wx:if="{{titleImg}}"><image src="http://tpic.home.news.cn/xhCloudNewsPic/{{titleImg}}" class="pic"  background-size="cover"/></view>
-<view class="content">{{txt}}</view>
+<block wx:if="{{articleType=='video'}}">
+<view class="video-page">
+    <view class="title">{{name}}</view>
+    <view class="info">{{showTime}}</view>
+    <view class="video"><video src="{{mp4Path}}"></video></view>
+</view>
+</block>
+<block wx:elif="{{articleType=='pic'}}"> 2 </block>
+<block wx:else>
+<view class="text-page">
+    <view class="title">{{title}}</view>
+    <view class="info">{{sortDate}}</view>
+    <view wx:if="{{titleImg}}"><image src="http://tpic.home.news.cn/xhCloudNewsPic/{{titleImg}}" class="pic"  background-size="cover"/></view>
+    <view class="content">{{txt}}</view>
+</view>
+</block>
