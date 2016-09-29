@@ -26,6 +26,9 @@ Page( {
             url: 'show?url='+encodeURIComponent(_e.currentTarget.dataset.url)
         })
     },
+    loadList:function(){
+        this.loadData({type:'list'});
+    },
     loadData:function(_options){
         var _t=this;
         _options=_options||{};
