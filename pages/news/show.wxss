@@ -1,0 +1,4 @@
+.title { margin:5%; font-size:20px; line-height:2}
+.info { margin:5%; font-size:12px; line-height:1.5; color:#aaa}
+.pic { width:100%}
+.content { margin:5%; font-size:14px; line-height:1.7}

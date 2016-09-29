@@ -1,0 +1,18 @@
+<swiper class="swiper-box" indicator-dots="{{swiper.indicatorDots}}"
+  autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+  <block wx:for="{{swiper.items}}">
+    <swiper-item class="swiper-item" data-id="{{item.id}}" data-url="{{item.url}}" catchtap="showNews">
+      <image src="{{item.pic}}" class="pic"  background-size="cover"/>
+      <text class="title">{{item.title}}</text>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="list-box">
+  <block wx:for="{{list.items}}">
+    <view class="list-item" data-id="{{item.id}}" data-url="{{item.url}}" catchtap="showNews">
+      <image src="{{item.titleImgSmall}}" class="pic"  background-size="cover"/>
+      <text class="title">{{item.title}}</text>
+      <text class="abstract">{{item.releaseDate}}</text>
+    </view>
+  </block>
+</view>

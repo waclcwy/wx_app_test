@@ -1,0 +1,4 @@
+<view class="title">{{title}}</view>
+<view class="info">{{sortDate}}</view>
+<view wx:if="{{titleImg}}"><image src="http://tpic.home.news.cn/xhCloudNewsPic/{{titleImg}}" class="pic"  background-size="cover"/></view>
+<view class="content">{{txt}}</view>

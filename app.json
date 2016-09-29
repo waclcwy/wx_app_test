@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/test/test",
+    "pages/news/news",
+    "pages/index/index",
+    "pages/news/show",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#FF6A00",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "微信小程序",
+    "backgroundColor": "#eee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color":"#000",
+    "selectedColor":"#FF6A00",
+    "backgroundColor":"#fff",
+    "borderStyle":"black",
+    "list": [{
+      "iconPath": "pages/logs/icon.png",
+      "selectedIconPath": "pages/logs/selectedIcon.png",
+      "pagePath": "pages/logs/logs",
+      "text": "日志"
+    }, {
+      "iconPath": "pages/news/icon.png",
+      "selectedIconPath": "pages/news/selectedIcon.png",
+      "pagePath": "pages/news/news",
+      "text": "新闻"
+    }, {
+      "iconPath": "pages/index/icon.png",
+      "selectedIconPath": "pages/index/selectedIcon.png",
+      "pagePath": "pages/index/index",
+      "text": "我的"
+    }, {
+      "iconPath": "pages/test/icon.png",
+      "selectedIconPath": "pages/test/selectedIcon.png",
+      "pagePath": "pages/test/test",
+      "text": "测试"
+    }]
+  }
+}
