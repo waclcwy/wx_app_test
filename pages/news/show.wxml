@@ -5,7 +5,22 @@
     <view class="video"><video src="{{mp4Path}}"></video></view>
 </view>
 </block>
-<block wx:elif="{{articleType=='pic'}}"> 2 </block>
+<block wx:elif="{{articleType=='pic'}}">
+<view class="pic-page">
+    <view class="title">{{content.itemlist[0].title}}</view>
+    <view class="info">{{content.itemlist[0].date1}}</view>
+    <swiper class="swiper-box" interval="1000">
+    <block wx:for="{{content.itemlist[0].imgArr}}">
+        <swiper-item class="swiper-item">
+        <image src="{{item.middle}}" class="pic"  background-size="cover"/>
+        <text class="text">{{item.description}}</text>
+        </swiper-item>
+    </block>
+    </swiper>
+    <view wx:if="{{titleImg}}"><image src="http://tpic.home.news.cn/xhCloudNewsPic/{{titleImg}}" class="pic"  background-size="cover"/></view>
+    <view class="content">{{content.itemlist[0].abstract}}</view>
+</view>
+</block>
 <block wx:else>
 <view class="text-page">
     <view class="title">{{title}}</view>

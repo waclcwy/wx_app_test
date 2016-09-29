@@ -1,7 +1,11 @@
-.title { margin:5%; font-size:20px; line-height:2}
+.title { margin:0 5% 5%; font-size:20px; line-height:2}
 .info { margin:5%; font-size:12px; line-height:1.5; color:#aaa}
 .pic { width:100%}
 .content { margin:5%; font-size:14px; line-height:1.7}
+.pic-page .swiper-box { width:100%; height:215px}
+.pic-page .swiper-box .pic { width:100%; height:215px}
+
+
 .video-page { position:relative; color:#fff}
 .video-page, .video, .video video { width:100%; height:100%}
 .video-page .title { position:absolute; z-index:100; top:0; left:0; width:100%}

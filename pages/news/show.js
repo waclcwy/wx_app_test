@@ -10,9 +10,13 @@ Page( {
         if(_url){
             if(_url.indexOf('_v.')>-1){
                 _articleType = 'video';
+            }else if(_url.indexOf('_p.')>-1){
+                _articleType = 'pic';
             }
             if(_articleType=='video'){
                 _url=_url.replace(/_[\w]\.html?/i,'_videos.json');
+            }else if(_articleType=='pic'){
+                _url=_url.replace(/_[\w]\.html?/i,'.json');
             }else{
                 _url=_url.replace(/_[\w]\./i,'_r.');
             }
