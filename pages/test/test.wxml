@@ -1,0 +1,2 @@
+<image src="{{pic}}" background-size="cover"/>
+<button bindtap="run" loading="{{loadingTag}}">run</button>
